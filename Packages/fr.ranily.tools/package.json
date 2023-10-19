@@ -1,7 +1,7 @@
 {
   "name": "fr.ranily.tools",
   "displayName": "Ranily Tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "tool",
   "unity": "2019.4",
   "description": "Tools for content creator",
