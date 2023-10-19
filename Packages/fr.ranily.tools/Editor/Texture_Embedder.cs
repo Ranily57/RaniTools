@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿#if !COMPILER_UDONSHARP && UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
 using System.IO;
 
-public class TextureAssignerWindow : EditorWindow
+[InitializeOnLoad]
+public class Texture_Embedder : EditorWindow
 {
     private GameObject model;
     private string textureFolderPath;
@@ -11,7 +13,7 @@ public class TextureAssignerWindow : EditorWindow
     [MenuItem("Window/Texture Assigner")]
     public static void ShowWindow()
     {
-        GetWindow<TextureAssignerWindow>("Texture Assigner");
+        GetWindow<Texture_Embedder>("Texture Assigner");
     }
 
     void OnGUI()
@@ -69,3 +71,4 @@ public class TextureAssignerWindow : EditorWindow
         }
     }
 }
+#endif
